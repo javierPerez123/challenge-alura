@@ -12,7 +12,7 @@ const arrayNcaracteres = [1, 4, 3, 3, 3];
 function encriptacion() {
 
     // ***nombramos las variables para la encriptacion***
-    let entradaDeTexto = document.getElementById("entrada").value
+    let entradaDeTexto = document.getElementById("entrada").value;
     let palabraEncriptada;
     let caracterer;
     let minuscula = 0;
@@ -48,7 +48,7 @@ function encriptacion() {
 
         // ***concatenador de la palabra encriptada***
         palabraEncriptada = arrayPalabraEncriptada.join("");
-        palabraEncriptadaGeneral = palabraEncriptada
+        palabraEncriptadaGeneral = palabraEncriptada;
         boleanoParaCopy = true;
         document.getElementById("muñeco").style.display = "none";
         document.getElementById("noImprime").style.display = "none";
@@ -58,7 +58,7 @@ function encriptacion() {
         document.getElementById("botonOculto").style.display = "block";
     }
     else {
-        alert("El texto introducido contiene Mayusculas o caracteres especiales, VUELVA A INTENTAR.")
+        alert("El texto introducido contiene Mayusculas o caracteres especiales, VUELVA A INTENTAR.");
     }
 
 
@@ -89,7 +89,7 @@ function desencriptacion() {
 
         // ***formacion desencriptada***
         for (iii = 1; iii < entradaDeTextoEncriptado.length; iii++) {
-            caracter = entradaDeTextoEncriptado.slice(start, end)
+            caracter = entradaDeTextoEncriptado.slice(start, end);
 
             // ***evasor de caracteres***
             for (i = 0; i < arrayVocales.length; i++) {
@@ -102,7 +102,7 @@ function desencriptacion() {
 
             // ***contador de caracteres incluyendo loos evadidos***
             if (entradaDeTextoEncriptado.length == end) {
-                iii = entradaDeTextoEncriptado.length
+                iii = entradaDeTextoEncriptado.length;
             }
 
             start++;
@@ -113,34 +113,32 @@ function desencriptacion() {
 
         // ***concatenador de la palabra desencriptada***
         boleanoParaCopy = false;
-        palabraDesencriptada = arrayPalabraDesencriptada.join("")
+        palabraDesencriptada = arrayPalabraDesencriptada.join("");
         document.getElementById("muñeco").style.display = "none";
         document.getElementById("noImprime").style.display = "none";
-        document.getElementById("textoEncriptado").style.display = "none"
-        document.getElementById("textoDesencriptado").style.display = "block"
+        document.getElementById("textoEncriptado").style.display = "none";
+        document.getElementById("textoDesencriptado").style.display = "block";
         document.getElementById('imprimirDesencriptado').innerHTML = palabraDesencriptada;
         document.getElementById("botonOculto").style.display = "block";
     }
 
     else {
-        alert("El texto introducido contiene Mayusculas o caracteres especiales, VUELVA A INTENTAR.")
+        alert("El texto introducido contiene Mayusculas o caracteres especiales, VUELVA A INTENTAR.");
     }
 
 }
 
 // ***funcion para copiar texto de salida***
-
-
 function copiar() {
 
     // ***creacion de input para texto encriptado***
-    let extraeTextoE = document.getElementById("imprimirEncriptado").innerText
+    let extraeTextoE = document.getElementById("imprimirEncriptado").innerText;
     const inputOculto1 = document.createElement("input");
     inputOculto1.setAttribute("value", extraeTextoE);
     document.body.appendChild(inputOculto1);
 
     // ***creacion de input para texto desencriptado***
-    let extraeTextoDes = document.getElementById("imprimirDesencriptado").innerText
+    let extraeTextoDes = document.getElementById("imprimirDesencriptado").innerText;
     const inputOculto2 = document.createElement("input");
     inputOculto2.setAttribute("value", extraeTextoDes);
     document.body.appendChild(inputOculto2);
@@ -150,19 +148,19 @@ function copiar() {
         inputOculto1.focus();
     }
     else {
-        inputOculto2.focus()
+        inputOculto2.focus();
     }
 
     // ***seleccion y copiado del texto***
-    document.execCommand('selectAll')
-    document.execCommand('copy')
+    document.execCommand('selectAll');
+    document.execCommand('copy');
 
     // ***eliminacion de los inputs creados***
-    document.body.removeChild(inputOculto1)
-    document.body.removeChild(inputOculto2)
+    document.body.removeChild(inputOculto1);
+    document.body.removeChild(inputOculto2);
 
     // ***seleccion de la entrada de texto***
-    document.getElementById("entrada").focus()
-    document.execCommand('selectAll')
+    document.getElementById("entrada").focus();
+    document.execCommand('selectAll');
 
 } 
