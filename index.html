@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <main>
+        <div class="contenedor">
+            <h1 class="logo">
+                <img src="imagenes/Logo.jpg">
+            </h1>
+            <div class="textoIngresado">
+                <textarea type="text" id="entrada" size="" placeholder="Ingrese Texto" rows="6" name="roleExplanation"
+                    required></textarea>
+
+            </div>
+
+            <div class="exclamacion">
+                <label>!</label>
+            </div>
+
+            <div class="minusculasSinAcentoB">
+                <label class="minusculasSinAcento">Solo letras minúsculas y sin acentos</label>
+            </div>
+
+            <div class="botones">
+                <button class="A" onclick="encriptacion()">Encriptar</button>
+                <br>
+                <button class="B" onclick="desencriptacion()">Desencriptar</button>
+                <br>
+            </div>
+        </div>
+        <div class="boxTextoSalida">
+            <div class="muñeco" id="muñeco">
+                <img src="imagenes/Muñeco.jpg">
+            </div>
+            <div class="boxTextoMomentaneo" id="noImprime">
+                <div class="titulo">
+                    <label>Ningún mensaje fue encontrado</label>
+                </div>
+                <div class="parrafo">
+                    <label>Ingresar el texto que desees encriptar o desencriptar</label>
+                </div>
+            </div>
+            <div class="boxTextoEncriptado" id="textoEncriptado">
+                <label class="salida" id="imprimirEncriptado"></label>
+            </div>
+            <div class="boxTextoDesencriptado" id="textoDesencriptado">
+                <label class="salida" id="imprimirDesencriptado"></label>
+            </div>
+            <div class="boxBotonCopiar">
+                <button class="botonCopiar" id="botonOculto" onclick="copiar()">Copiar</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
