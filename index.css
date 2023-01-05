@@ -22,11 +22,22 @@ main {
 
 }
 
+.alura {
+    width: 32px;
+    height: 48px;
+}
+
 .muñeco {
 
     /* no mostrar el muñeco */
     display: none;
 
+}
+
+.imgMuñeco {
+    /* tamaño del muñeco */
+    width: 336px;
+    height: 304px;
 }
 
 .textoIngresado textarea {
@@ -177,7 +188,7 @@ main {
     width: 327px;
     margin: 64px 24px 40px;
     background-color: white;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.6);
     border-radius: 32px;
     box-sizing: border-box;
 }
