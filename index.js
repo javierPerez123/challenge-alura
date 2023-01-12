@@ -1,7 +1,5 @@
 // ***nombramos las variables***
 
-let textE = document.getElementById("imprimirEncriptado");
-let textDes = document.getElementById("imprimirDesencriptado");
 let boleanoParaCopy;
 const textoAcopiarDes = document.querySelector("imprimirDesencriptado");
 const arrayVocales = ["a", "e", "i", "o", "u"];
@@ -47,8 +45,7 @@ function encriptacion() {
         }
 
         // ***concatenador de la palabra encriptada***
-        palabraEncriptada = arrayPalabraEncriptada.join("");
-        palabraEncriptadaGeneral = palabraEncriptada;
+        palabraEncriptada = arrayPalabraEncriptada.join("")
         boleanoParaCopy = true;
         document.getElementById("muñeco").style.display = "none";
         document.getElementById("noImprime").style.display = "none";
